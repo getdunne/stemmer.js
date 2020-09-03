@@ -1,3 +1,9 @@
+## Root folder
+This is a representation of a suitable folder structure for a *stemmer.js* based site.
+
+The *index.html* file is boilerplate, which you only need change if you want to. The *song-setup.js* file (below) is the only file you'll need to edit, to set up your specific song.
+
+```javascript
 var songTitle = 'Dona Nobis Pacem';
 
 var tracks = [
@@ -16,3 +22,6 @@ var skipTimes = [
     { name: 'm42', timeSec: 97.3 },
     { name: 'm51', timeSec: 118.3 }
     ];
+```
+
+The *hue* numbers in each track definition range from 0 to 360, and correspond to "hue" values in the [HSL Color naming system](https://www.w3schools.com/colors/colors_hsl.asp).
