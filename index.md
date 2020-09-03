@@ -1,37 +1,11 @@
-## Welcome to GitHub Pages
+## Description
 
-You can use the [editor on GitHub](https://github.com/getdunne/stemmer.js/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+stemmer.js is a simple web app which allows simultaneous playback of multiple audio files (aka "stems"), with a simple GUI to allow the listener to adjust
+each stem's volume, mute and solo individual stems, and start playback from any of several pre-defined _cue points_.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The audio playback code is based on [Howler.js](https://github.com/goldfire/howler.js/). Responsive web layouts are based on
+[Twitter Bootstrap](https://getbootstrap.com/).
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/getdunne/stemmer.js/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+I don't claim that this is a great web app, or a particularly good example of Howler.js usage, or JavaScript code, or (certainly not) HTML/CSS. It's
+simply a starting point for a specific use-case (simultaneous playback of multiple audio files) which is not well-covered by the Howler.js documentation.
+I very much hope that more competent developers will improve on what I have started.
