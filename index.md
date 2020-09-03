@@ -49,3 +49,5 @@ var skipTimes = [
     { name: 'm51', timeSec: 118.3 }
     ];
 ```
+
+The *hue* numbers in each track definition range from 0 to 360, and correspond to "hue" values in the [HSL Color naming system](https://www.w3schools.com/colors/colors_hsl.asp).
