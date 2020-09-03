@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./stemmer/style.css">
+    <script type="text/javascript" src="./stemmer/howler.min.js"></script>
+    <script type="text/javascript" src="./song-setup.js"></script>
+    <script type="text/javascript" src="./stemmer/stemmer.js" defer></script>
+    <title>Stemmer</title>
+  <head>
+  <body>
+    <div class="container">
+    <p>Click the <strong>Load Sounds</strong> button below, and wait until it changes to "Ready to Play".</p>
+    <button id="loadBtn" type="button" onclick="loadSounds()">Load Sounds</button>
+    </div>
+    <hr>
+
+    <div id="tracksDiv" class="container">
+    <!-- Tracks list is generated here -->
+    </div>
+    
+    <div id="skipButtonsDiv" class="container">
+    <!-- Skip buttons are generated here -->
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
