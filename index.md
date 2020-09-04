@@ -3,6 +3,8 @@
 **stemmer.js** is a simple web app which allows simultaneous playback of multiple audio files (aka "stems"), with a simple GUI to allow the listener to adjust
 each stem's volume, mute and solo individual stems, and start playback from any of several pre-defined _cue points_.
 
+The main use-case is for choral singers needing to practice their parts at home during COVID-19 isolation. By using a set of stems instead of a single audio file, they can adjust the mix, mute or solo their own part, etc. If the choir wants to create a "virtual ensemble" performance video for e.g. YouTube, singers can also listen to the stems on headphones while recording their own part (audio and/or video) on another device.
+
 The audio playback code is based on [Howler.js](https://github.com/goldfire/howler.js/). Responsive web layouts are based on
 [Twitter Bootstrap](https://getbootstrap.com/).
 
