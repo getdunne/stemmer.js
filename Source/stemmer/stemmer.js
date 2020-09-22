@@ -13,10 +13,13 @@ var trackLevels = [], trackMuted = [], trackSoloed = [];
 let trackCount = tracks.length;
 for (var i = 0; i < trackCount; i++)
 {
+    let hue = tracks[i].hue;
+    let sat = tracks[i].sat;
+    let level = tracks[i].level;
+    
     let trackTitleDiv = document.createElement('div');
     trackTitleDiv.setAttribute('class', 'row');
-    let hue = tracks[i].hue;
-    trackTitleDiv.setAttribute('style', `color:white; background-color:hsl(${hue},70%,50%)`);
+    trackTitleDiv.setAttribute('style', `color:white; background-color:hsl(${hue},${sat}%,50%)`);
     trackTitleDiv.appendChild(document.createTextNode(tracks[i].name));
     tracksDiv.appendChild(trackTitleDiv);
     
@@ -24,7 +27,7 @@ for (var i = 0; i < trackCount; i++)
     controlsDiv.setAttribute('class', 'row');
     let buttonsDiv = document.createElement('div');
     buttonsDiv.setAttribute('class', 'col-3');
-    buttonsDiv.setAttribute('style', `background-color:hsl(${hue},70%,80%)`);
+    buttonsDiv.setAttribute('style', `background-color:hsl(${hue},${sat}%,80%)`);
     let muteButton = document.createElement('button');
     muteButton.appendChild(document.createTextNode('mute'));
     muteButton.disabled = true;
@@ -47,18 +50,18 @@ for (var i = 0; i < trackCount; i++)
     
     let sliderDiv = document.createElement('div');
     sliderDiv.setAttribute('class', 'col');
-    sliderDiv.setAttribute('style', `background-color:hsl(${hue},70%,80%); padding:15px`);
+    sliderDiv.setAttribute('style', `background-color:hsl(${hue},${sat}%,80%); padding:15px`);
     let slider = document.createElement('input');
     slider.type = 'range';
     slider.setAttribute('style', 'width:100%; height:20px');
     slider.min = 1;
     slider.max = 100;
     slider.disabled = true;
-    slider.value = 70;
+    slider.value = level;
     slider.index = i;
     slider.oninput = function() { setVolume(this.index, 0.01 * this.value); };
     sliders.push(slider);
-    trackLevels.push(0.7);
+    trackLevels.push(0.01 * level);
     trackMuted.push(false);
     trackSoloed.push(false);
     sliderDiv.appendChild(slider);
@@ -165,22 +168,23 @@ function onSoundLoad()
     sounds.forEach(function(sound, index)
     {
         if (sound.state() == 'loaded')
-            sound.volume(0.7);
+            sound.volume(trackLevels[index]);
         else
             allLoaded = false;
     });
     
     if (allLoaded)
     {
-        loadBtn = document.getElementById('loadBtn')
-        loadBtn.innerHTML = "Ready to Play";
-        loadBtn.disabled = true;
         muteButtons.forEach(function(btn, index) { btn.disabled = false; })
         soloButtons.forEach(function(btn, index) { btn.disabled = false; })
         sliders.forEach(function(slider, index) { slider.disabled = false; });
         skipButtons.forEach(function(btn, index) { btn.disabled = false; });
         pauseButton.disabled = false;
         backButtons.forEach(function(btn, index) { btn.disabled = false; });
+        
+        loadBtn = document.getElementById('loadBtn')
+        loadBtn.innerHTML = "Ready to Play";
+        loadBtn.disabled = true;
     }
 }
 

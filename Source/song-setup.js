@@ -1,10 +1,10 @@
 var songTitle = 'Dona Nobis Pacem';
 
 var tracks = [
-    { hue: 0, name: 'Piano', path: './stems/Piano.mp3' },
-    { hue: 90, name: 'Soprano 1', path: './stems/Soprano1.mp3' },
-    { hue: 120, name: 'Soprano 2', path: './stems/Soprano2.mp3' },
-    { hue: 30, name: 'Alto', path: './stems/Alto.mp3' }
+    { hue: 0, sat: 70, level: 70, name: 'Piano', path: './stems/Piano.mp3' },
+    { hue: 90, sat: 70, level: 70, name: 'Soprano 1', path: './stems/Soprano1.mp3' },
+    { hue: 120, sat: 70, level: 70, name: 'Soprano 2', path: './stems/Soprano2.mp3' },
+    { hue: 30, sat: 70, level: 70, name: 'Alto', path: './stems/Alto.mp3' }
     ];
 
 var skipTimes = [
